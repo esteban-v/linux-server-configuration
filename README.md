@@ -93,8 +93,8 @@ This is the configuration procedure to enable a linux server using Amazon Lights
 * If you had a Github repository for your application you can now clone that repository into the dir you just created or if you have your application files on your local machine (which was my case) you can upload them to the same dir using :
     `scp -i /path/to/.ssh/private_key path/to/local/file <username>@<IP address>:/destination/path`
 * After you have all your files in place use your corresponding file (database_setup.py) to setup your database:
-`python database_setup.py`
-* Create myapp.wsgi file to serve your application inside /var/www/catalog_app
+    `python database_setup.py`
+* Create myapp.wsgi file to serve your application inside `/var/www/catalog_app`
     ```
     cd /var/www/catalog_app
     sudo nano myapp.wsgi
@@ -126,8 +126,7 @@ This is the configuration procedure to enable a linux server using Amazon Lights
             Allow from all
         </Directory>
     </VirtualHost>
-    ```
-      
+    ```     
     Enable your application running:
     ```
     sudo a2dissite 000-default.conf
